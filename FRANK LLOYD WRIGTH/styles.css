@@ -1,0 +1,487 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(55, 55, 55, 0.1);
+}
+
+header .logo h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #333;
+}
+
+.search-box input {
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.menuarch {
+    background-color: white;
+    border-top: 2px solid #ccc;
+}
+
+.menuarch ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.menuarch ul li {
+    display: inline;
+    position: relative;
+    margin: 0 40px;
+}
+
+.menuarch ul li a {
+    text-decoration: none;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    font-size: 15px;
+}
+
+.menuarch ul li ul {
+    display: inline;
+    position: static;
+    top: 110%;
+    left: 0;
+    background-color: white;
+    box-shadow: 10px 8px 15px rgba(0, 0, 0, 0.448);
+    padding: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(20px);
+}
+
+.menuarch ul li ul {
+    justify-content: center;
+    position: absolute;
+}
+
+.menuarch ul li:hover>ul {
+    display: block;
+    opacity: 100;
+    transform: translateY(0);
+}
+
+.menuarch ul li ul:hover {
+    display: block;
+    opacity: 100;
+}
+
+.menuarch ul li ul li a {
+    font-weight: normal;
+    margin: 0 50px;
+    padding: 5px;
+    line-height: 1;
+    color: #9f9f9f;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.menuarch ul li ul li a:hover {
+    color: #000;
+}
+
+.menuarch ul li a:hover {
+    color: #000;
+}
+
+main {
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+main .images-container {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 0px;
+}
+
+main .image-item img {
+    width: 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+main .image-item img:hover {
+    transform: scale(1.05);
+}
+
+.intro-text {
+    text-align: center;
+    font-weight: 300;
+    font-size: 15px;
+    margin-top: 30px;
+    color: rgb(152, 152, 152);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+footer .footer-left a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: small;
+    font-weight: 600;
+}
+
+footer .footer-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+footer .footer-line {
+    width: 50px;
+    height: 3px;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.footer-right a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer-right img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-right img:hover {
+    transform: scale(1.1);
+    filter: brightness(2);
+}
+
+.footer-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    transform: translateX(-60px);
+}
+
+/* Estilo para la sección de biografía */
+.biography-section {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.bio-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bio-text {
+    max-width: 550px;
+}
+
+.bio-text h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bio-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.bio-adicional {
+    margin-top: 20px;
+}
+
+.bio-adicional h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bio-adicional ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bio-adicional ul li {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.bio-adicional ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.bio-legacy {
+    margin-top: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bio-legacy h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.bio-legacy p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+.bio-study p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Sección de obras */
+.works-section {
+    margin-left: 70px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.works-section h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.work-item {
+    display: flex;
+    margin-top: 50px;
+    align-items: left;
+    margin-bottom: 30px;
+}
+
+.work-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.work-text {
+    margin-left: 40px;
+    max-width: 900px;
+}
+
+.work-text h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.work-text p {
+    font-size: 16px;
+    margin-right: 30px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.comments-section {
+    margin-top: 50px;
+    margin-right: 35px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comments-section p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Estilos para la sección de Aportes */
+.contributions-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.contributions-section h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.contribution-item {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contribution-item h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contribution-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.comments-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #e9f5ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.comments-section h3 {
+    font-size: 1.6em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.comments-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #444;
+    text-align: center;
+}
+
+/* CSS de toda la pagina, configuracion para la resposividad */
+
+@media (max-width: 768px) {
+    /* Ajuste del header y menú */
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .menuarch ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ajuste de contenedor de imágenes */
+    .images-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* Ajuste de biografía y secciones */
+    .bio-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio-image img {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .work-item {
+        flex-direction: column;
+        align-items: left;
+    }
+    .work-image img {
+        width: 80%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        margin-left: -15px;
+    }
+    .work-text p {
+        margin-left: -55px;
+    }
+    .work-text h3 {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: -55px;
+    }
+    .work-text h2 {
+        margin-left: -55px;
+    }
+    .comments-section p {
+        justify-content: left;
+    }
+
+    /* Ajuste del footer */
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
